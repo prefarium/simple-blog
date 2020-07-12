@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
+  add_flash_types :success
 
 
   def index
@@ -8,7 +9,7 @@ class ArticlesController < ApplicationController
 
 
   def show
-    @article = Article.find params[:id]
+    @article = Article.find(params[:id])
   end
 
 
@@ -18,30 +19,30 @@ class ArticlesController < ApplicationController
 
 
   def create
-    @article = Article.new article_params
+    @article = Article.new(article_params)
     @article.save
 
-    redirect_to article_path @article
+    redirect_to article_path(@article), success: 'Article is created'
   end
 
 
   def destroy
-    @article = Article.find params[:id]
+    @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to articles_path
+    redirect_to articles_path, success: 'Article is destroyed'
   end
 
 
   def edit
-    @article = Article.find params[:id]
+    @article = Article.find(params[:id])
   end
 
 
   def update
     @article = Article.find params[:id]
-    @article.update article_params
+    @article.update(article_params)
 
-    redirect_to article_path @article
+    redirect_to article_path(@article), success: 'Article is updated'
   end
 end
