@@ -1,11 +1,24 @@
-<h1>All Articles</h1>
+<h1>All articles</h1>
 
-<ul id="articles">
+<%# List of all articles %>
+<ul>
   <% @articles.each do |article| %>
     <li>
+
       <%= link_to article.title, article_path(article) %>
+
+      <%# Tags if exist %>
+      <% if article.tags.size.positive? %>
+        [tags:
+          <% article.tags.each do |tag| %>
+            <%= link_to " #{tag.name}", tag_path(tag) %>
+          <% end %>
+        ]
+      <% end %>
+
     </li>
   <% end %>
 </ul>
 
+<%# Create new article %>
 <%= link_to "Create a New Article", new_article_path %>

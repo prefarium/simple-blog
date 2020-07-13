@@ -4,8 +4,9 @@ class Article < ApplicationRecord
   has_many :tags, through: :taggings
   # tags = article.taggings.map { |tagging| tagging.tag }
 
+  # Displays tags on edit page
   def tag_list
-    tags.map { |tag| tag.name }.join(", ")
+    tags.map { |tag| tag.name }.join(', ')
   end
 
   def tag_list=(tags_string)
