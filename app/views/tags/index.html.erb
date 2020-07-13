@@ -5,6 +5,11 @@
   <% @tags.each do |tag| %>
     <li>
 
+      <%# Botton to delete tag %>
+      <%= link_to '[delete]', tag_path(tag),
+                  method: :delete %>
+
+      <%# Tag itself %>
       <%= link_to tag.name, tag_path(tag) %>
 
       <%# Displays amount of articles per tag %>

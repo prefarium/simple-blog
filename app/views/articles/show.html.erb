@@ -10,23 +10,18 @@
         at <%= @article.updated_at.strftime('%k:%M') %></p>
 <% end %>
 
-<%# Display tags if exist %>
-<% if @article.tags.size.positive? %>
-  <p>
-
-    Tags:
-    <% @article.tags.each do |tag| %>
-      <%= link_to tag.name, tag_path(tag) %>
-    <% end %>
-
-  </p>
-<% end %>
+<%# Display tags if they exist %>
+<%= render partial: 'shared/tags_display',
+            locals:  { tags_to_display: @article.tags,
+                      wrap: 'Tags:' } %>
 
 <%# Buttons %>
-<%= link_to '[Edit]', edit_article_path(@article) %>
+<p>
+  <%= link_to '[edit]', edit_article_path(@article) %>
 
-<%= link_to '[Delete]', article_path(@article),
-            method: :delete %>
+  <%= link_to '[delete]', article_path(@article),
+              method: :delete %>
+</p>
 
 <%# Add comment %>
 <%= render 'comments/form'%>
