@@ -29,6 +29,10 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
+
+    tags = @article.tags
+    tags.each { |tag| tag.destroy if tag.articles.size == 1 }
+
     @article.destroy
 
     redirect_to articles_path, success: 'Article is deleted'
