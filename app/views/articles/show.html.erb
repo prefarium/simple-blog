@@ -16,12 +16,14 @@
                       wrap: 'Tags:' } %>
 
 <%# Buttons %>
-<p>
-  <%= link_to '[edit]', edit_article_path(@article) %>
+<% if logged_in? %>
+  <p>
+    <%= link_to '[edit]', edit_article_path(@article) %>
 
-  <%= link_to '[delete]', article_path(@article),
-              method: :delete %>
-</p>
+    <%= link_to '[delete]', article_path(@article),
+                method: :delete %>
+  </p>
+<% end %>
 
 <%# Add comment %>
 <%= render 'comments/form'%>

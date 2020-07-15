@@ -6,8 +6,10 @@
     <li>
 
       <%# Botton to delete tag %>
-      <%= link_to '[delete]', tag_path(tag),
-                  method: :delete %>
+      <% if logged_in? %>
+        <%= link_to '[delete]', tag_path(tag),
+                    method: :delete %>
+      <% end %>
 
       <%# Tag itself %>
       <%= link_to tag.name, tag_path(tag) %>

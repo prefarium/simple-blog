@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  add_flash_types :success
+  before_action :require_login, only: [:destroy]
 
   def show
     @tag = Tag.find(params[:id])
@@ -13,6 +13,6 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     @tag.destroy
 
-    redirect_to tags_path, success: 'Tag is deleted'
+    redirect_to tags_path, notice: 'Tag is deleted'
   end
 end
