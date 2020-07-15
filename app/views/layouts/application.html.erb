@@ -8,8 +8,7 @@
   <body>
     <%= render 'shared/flashes' %>
 
-    <%# Switch to tags %>
-    <%= render 'shared/switch_article_tag' %>
+    <%= render 'shared/switch_between_sections' %>
 
     <%= yield %>
 
@@ -21,6 +20,10 @@
         <%= link_to "(logout)", logout_path %>
       <% else %>
         <%= link_to "(login)", login_path %>
+      <% end %>
+
+      <% unless Author.exists? %>
+        <%= link_to "(register)", new_author_path %>
       <% end %>
     </h6>
   </body>

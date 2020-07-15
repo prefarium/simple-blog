@@ -1,11 +1,15 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
-  before_action :zero_authors_or_authenticated, only: [:new, :create]
   before_action :require_login, except: [:new, :create]
+  before_action :zero_authors_or_authenticated, only: [:new, :create]
 
+  # Does not allow use straight link to registration form
+  #   in case when manual registration is forbidden
   def zero_authors_or_authenticated
     unless Author.count.zero? || current_user
-      redirect_to root_path, notice: 'Ask existing user to register you'
+      redirect_to root_path,
+        notice: "You can't register by yourself now. " \
+                "Please ask an existing user to acreate an account for you"
       false
     end
   end
