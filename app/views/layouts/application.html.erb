@@ -6,7 +6,11 @@
   </head>
 
   <body>
-    <%= render 'flashes' %>
+    <%= render 'shared/flashes' %>
+
+    <%# Switch to tags %>
+    <%= render 'shared/switch_article_tag' %>
+
     <%= yield %>
   </body>
 </html>

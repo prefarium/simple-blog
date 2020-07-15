@@ -1,11 +1,20 @@
-<h1>All Articles</h1>
+<h1>All articles</h1>
 
-<ul id="articles">
+<%# List of all articles %>
+<ul>
   <% @articles.each do |article| %>
     <li>
+
       <%= link_to article.title, article_path(article) %>
+
+      <%# Display tags if they exist %>
+      <%= render partial: 'shared/tags_display',
+                 locals:  { tags_to_display: article.tags,
+                            wrap: 'tags:' } %>
+
     </li>
   <% end %>
 </ul>
 
+<%# Create new article %>
 <%= link_to "Create a New Article", new_article_path %>

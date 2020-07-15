@@ -1,0 +1,22 @@
+<h1>All tags</h1>
+
+<%# Displays all tags %>
+<ul>
+  <% @tags.each do |tag| %>
+    <li>
+
+      <%# Botton to delete tag %>
+      <%= link_to '[delete]', tag_path(tag),
+                  method: :delete %>
+
+      <%# Tag itself %>
+      <%= link_to tag.name, tag_path(tag) %>
+
+      <%# Displays amount of articles per tag %>
+      <span>
+        (<%= pluralize(tag.articles.size, 'article') %>)
+      </span>
+
+    </li>
+  <% end %>
+</ul>

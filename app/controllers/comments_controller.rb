@@ -8,6 +8,6 @@ class CommentsController < ApplicationController
 
     @comment.save
 
-    redirect_to article_path(@comment.article), success: 'Article is created'
+    redirect_to article_path(@comment.article), success: 'Comment is added'
   end
 end
