@@ -17,4 +17,6 @@
 </ul>
 
 <%# Create new article %>
-<%= link_to "Create a New Article", new_article_path %>
+<% if logged_in? %>
+  <%= link_to "Create a New Article", new_article_path %>
+<% end %>
