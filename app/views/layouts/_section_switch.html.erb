@@ -1,0 +1,34 @@
+<% current_path = request.env['PATH_INFO'] %>
+
+<ul class = "section-list">
+
+  <%# Adds id to a link %>
+  <%#   A link with id shall be highlighted differently %>
+  <% if current_path == articles_path %>
+    <li><%= link_to 'Articles', articles_path, class: :section,
+                                               id: 'current-section' %></li>
+  <% else %>
+    <li><%= link_to 'Articles', articles_path, class: :section %></li>
+  <% end %>
+
+
+  <% if current_path == tags_path %>
+    <li><%= link_to 'Tags', tags_path, class: :section,
+                                               id: 'current-section' %></li>
+  <% else %>
+    <li><%= link_to 'Tags', tags_path, class: :section %></li>
+  <% end %>
+
+
+  <% if logged_in? %>
+
+    <% if current_path == authors_path %>
+      <li><%= link_to 'Authors', authors_path, class: :section,
+                                                id: 'current-section' %></li>
+    <% else %>
+      <li><%= link_to 'Authors', authors_path, class: :section %></li>
+    <% end %>
+
+  <% end %>
+
+</ul>
