@@ -8,6 +8,22 @@ $font-size: 100%;
   font-size: $font-size;
 }
 
+a.button {
+  border-color: #1c87c9;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #1c87c9;
+  color: white;
+  text-decoration: none;
+}
+
+a.button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+// CSS
 
 body {
   display: flex;
@@ -19,18 +35,17 @@ body {
 
 aside.nav-block {
   flex-grow: 1;
+  text-align: center;
   margin: $base-space;
 }
 
 
-ul.section-list {
+ul.sections-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 
   li {
-    text-align: center;
-
     border-color: black;
     border-style: $border-style;
     border-width: $border-width;
@@ -54,6 +69,21 @@ a.section {
 a.section:hover, a#current-section {
   background-color: #1c87c9;
   -webkit-text-stroke: 1px white;
+}
+
+
+a.new-article-button {
+  display: inline-block;
+  border-radius: 11px;
+  padding: 1px 3px;
+  margin-top: $base-space * 2;
+  margin-bottom: $base-space;
+  font-size: $font-size * 0.85;
+}
+
+
+a.new-article-button:hover p.new-label:after{
+  content: 'ADD';
 }
 
 
@@ -93,22 +123,10 @@ footer {
     margin: 2px 3px;
   }
 
-  a.button {
+  a.auth-button {
     float: right;
-    border-color: #1c87c9;
-    border-width: 1px;
-    border-style: solid;
     border-radius: 8px;
-    background-color: #1c87c9;
-    color: white;
-    text-decoration: none;
     padding: 1px 3px;
     margin: 1px 3px 1px 0;
-  }
-
-  a.button:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
   }
 }
