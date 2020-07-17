@@ -10,7 +10,7 @@
       <%# Display additional tags if they exist %>
       <%= render partial: 'shared/tags_display',
                   locals:  { tags_to_display: article.tags - [@tag],
-                            wrap: 'additional tags:' } %>
+                            prefix: 'additional tags:' } %>
 
     </li>
   <% end %>

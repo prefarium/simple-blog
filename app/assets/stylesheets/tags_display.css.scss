@@ -1,0 +1,36 @@
+$font-size: 100%;
+
+.tags-list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-item {
+  display: inline-block;
+}
+
+.tags-prefix, .link-to-tag {
+  font-size: $font-size * 0.7;
+  font-style: italic;
+}
+
+.tags-prefix {
+  color: #686868;
+}
+
+.link-to-tag {
+  border-color: #9c9c9c;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #eeeeee;
+  color: #2c2b2b;
+  text-decoration: none;
+}
+
+.link-to-tag:hover {
+  background-color: #9c9c9c;
+  color: white;
+  cursor: pointer;
+}

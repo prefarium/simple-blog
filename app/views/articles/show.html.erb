@@ -13,7 +13,7 @@
 <%# Display tags if they exist %>
 <%= render partial: 'shared/tags_display',
             locals:  { tags_to_display: @article.tags,
-                      wrap: 'Tags:' } %>
+                       prefix: 'Tags:' } %>
 
 <%# Buttons %>
 <% if logged_in? %>
