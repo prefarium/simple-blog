@@ -1,0 +1,40 @@
+.sections-list {
+  li {
+    @include main-border-defaults
+  }
+}
+
+
+.section {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  text-decoration: none;
+  font-size: $font-size * 0.85;
+  -webkit-text-stroke: 1px $nice-blue;
+  -webkit-text-fill-color: white;
+}
+
+
+.section:hover, #current-section {
+  background-color: $nice-blue;
+  -webkit-text-stroke: 1px white;
+}
+
+
+.new-article-button {
+  @include button-defaults;
+
+  display: inline-block;
+  border-radius: 11px;
+  margin-top: $base-space * 2;
+  margin-bottom: $base-space;
+  font-size: $font-size * 0.85;
+}
+
+
+.new-article-button:hover {
+  @include button-defaults-hover
+}

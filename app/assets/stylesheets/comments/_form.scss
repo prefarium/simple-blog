@@ -1,0 +1,33 @@
+.comment-form {
+  @include comment-block-defaults;
+}
+
+.comment-form-title {
+  font-weight: bold;
+}
+
+.new_comment { //defailt class for this form set by reails
+  margin-top: $base-space;
+}
+
+.comment-form-item {
+  margin-bottom: $base-space;
+}
+
+.comment-form-item-title {
+  font-size: $font-size * 0.9;
+  font-style: italic;
+}
+
+.comment-form-item-field {
+  @include set-form-width()
+}
+
+.comment-form-submit-button {
+  @include button-defaults;
+  border-radius: 5px;
+}
+
+.comment-form-submit-button:hover {
+  @include button-defaults-hover;
+}

@@ -1,11 +1,16 @@
 <% if tags_to_display.size.positive? %>
-  <span>
 
-    <%= wrap %>
+  <span class = 'tags-prefix'><%= prefix %></span>
 
+  <ul class = 'tags-list'>
     <% tags_to_display.each do |tag| %>
-      <%= link_to " #{tag.name}", tag_path(tag) %>
-    <% end %>
 
-  </span>
+      <li class = 'tag-item'>
+        <%= link_to "#{tag.name}", tag_path(tag),
+                    class: 'link-to-tag' %>
+      </li>
+
+    <% end %>
+  </ul>
+
 <% end %>

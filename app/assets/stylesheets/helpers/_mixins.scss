@@ -1,0 +1,57 @@
+@mixin main-border-defaults {
+  border-color: black;
+  border-style: double;
+  border-width: 2px;
+}
+
+@mixin button-defaults {
+  border-color: $nice-blue;
+  border-width: 1px;
+  border-style: solid;
+  background-color: $nice-blue;
+  color: white;
+  text-decoration: none;
+  padding: 1px 3px;
+}
+
+@mixin button-defaults-hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+@mixin comment-block-defaults {
+  display: block;
+  font-size: $font-size * 0.8;
+  background-color: $nice-yellow;
+  border-style: dotted;
+  border-width: 1px;
+  padding: $base-space;
+  margin-top: $base-space;
+}
+
+@mixin set-form-width {
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-style: inset;
+}
+
+@mixin link-list-item {
+  @include button-defaults;
+
+  background-color: $nice-yellow;
+  color: black;
+  border-color: black;
+  border-style: dashed;
+}
+
+@mixin link-list-item-hover {
+  @include button-defaults-hover;
+
+  background-color: rgb(252, 252, 79);
+  color: black;
+  border-color: black;
+}

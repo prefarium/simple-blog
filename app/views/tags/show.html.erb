@@ -1,16 +1,16 @@
-<h1>Articles tagged with <%= @tag.name %></h1>
+<% provide(:page_title, "Articles tagged with ##{@tag.name}") %>
 
 <%# List of tagged articles %>
 <ul>
   <% @tag.articles.each do |article| %>
-    <li>
+    <li class = 'article-item'>
 
-      <%= link_to article.title, article_path(article) %>
+      <%= link_to article.title, article_path(article), class: 'link-to-article' %>
 
       <%# Display additional tags if they exist %>
       <%= render partial: 'shared/tags_display',
                   locals:  { tags_to_display: article.tags - [@tag],
-                            wrap: 'additional tags:' } %>
+                            prefix: 'additional tags:' } %>
 
     </li>
   <% end %>

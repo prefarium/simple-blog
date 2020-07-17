@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Blogger</title>
-    <%= render 'layouts/common_rails_stuff' %>
+    <title><%= full_title(yield(:page_title)) %></title>
+
+    <%= render 'layouts/rails_defaults' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <%= render 'shared/flashes' %>
+    <%# Side navigation block %>
+    <aside class = "left-nav-block">
+      <%= render 'layouts/section_switch' %>
+      <%= render 'layouts/create_new_article' %>
+      <%= render 'shared/flashes' %>
+    </aside>
 
-    <%= render 'shared/switch_between_sections' %>
+    <%# Main content%>
+    <div class = "main-content">
 
-    <%= yield %>
+      <%# Page title %>
+      <header class = "content-block">
+        <span class = "page-title">
+          <%= yield(:page_title) %>
+        </span>
+      </header>
 
-    <hr>
+      <%# Yielded content %>
+      <main class = "content-block">
+        <%= yield %>
+      </main>
 
-    <h6>
-      <% if logged_in? %>
-        <%= "Logged in as #{current_user.email}" %>
-        <%= link_to "(logout)", logout_path %>
-      <% else %>
-        <%= link_to "(login)", login_path %>
-      <% end %>
+      <%# Login/logout buttons and informantion %>
+      <footer class = "content-block">
+        <%= render 'layouts/session_manager'%>
+      </footer>
 
-      <% unless Author.exists? %>
-        <%= link_to "(register)", new_author_path %>
-      <% end %>
-    </h6>
+    </div>
   </body>
 </html>

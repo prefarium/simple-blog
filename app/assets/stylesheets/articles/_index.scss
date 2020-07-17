@@ -1,0 +1,11 @@
+.article-item {
+  margin: 1%;
+}
+
+.link-to-article {
+  @include link-list-item;
+}
+
+.link-to-article:hover {
+  @include link-list-item-hover;
+}

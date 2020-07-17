@@ -1,6 +1,16 @@
-<div>
-  <h4>Comment by <%= comment.author_name %></h4>
-  <p><%= comment.body %></p>
-  <p>Posted <%= distance_of_time_in_words(comment.article.created_at,
-                                          comment.created_at) %> later</p>
+<div class = 'comment'>
+
+  <div class = 'comment-info'>
+    <span class = 'commentator-name'>
+      <%= comment.author_name %>
+    </span>
+
+    <span class = 'comment-timestamp'>
+      posted <%= distance_of_time_in_words(comment.article.created_at,
+                                          comment.created_at) %> later
+    </span>
+  </div>
+
+  <p class = 'comment-body'><%= comment.body %></p>
+
 </div>

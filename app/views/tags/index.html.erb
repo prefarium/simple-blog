@@ -1,4 +1,4 @@
-<h1>All tags</h1>
+<% provide(:page_title, 'All tags') %>
 
 <%# Displays all tags %>
 <ul>
@@ -7,15 +7,16 @@
 
       <%# Botton to delete tag %>
       <% if logged_in? %>
-        <%= link_to '[delete]', tag_path(tag),
-                    method: :delete %>
+        <%= link_to 'delete', tag_path(tag),
+                    method: :delete,
+                    class: 'delete-tag-button' %>
       <% end %>
 
       <%# Tag itself %>
-      <%= link_to tag.name, tag_path(tag) %>
+      <%= link_to tag.name, tag_path(tag), class: 'link-to-tag' %>
 
       <%# Displays amount of articles per tag %>
-      <span>
+      <span class = 'tags-prefix'>
         (<%= pluralize(tag.articles.size, 'article') %>)
       </span>
 

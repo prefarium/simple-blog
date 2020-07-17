@@ -1,33 +1,65 @@
-<h1><%= @article.title %></h1>
-<p><%=  @article.body  %></p>
+<% provide(:page_title, @article.title) %>
 
-<%# Timestamps %>
-<p>Created <%= @article.created_at.strftime("%-d %b %Y") %>
-        at <%= @article.created_at.strftime('%k:%M') %></p>
+<div class = 'article-box'>
 
-<% if @article.updated_at != @article.created_at %>
-<p>Updated <%= @article.updated_at.strftime("%-d %b %Y") %>
-        at <%= @article.updated_at.strftime('%k:%M') %></p>
-<% end %>
-
-<%# Display tags if they exist %>
-<%= render partial: 'shared/tags_display',
-            locals:  { tags_to_display: @article.tags,
-                      wrap: 'Tags:' } %>
-
-<%# Buttons %>
-<% if logged_in? %>
-  <p>
-    <%= link_to '[edit]', edit_article_path(@article) %>
-
-    <%= link_to '[delete]', article_path(@article),
-                method: :delete %>
+  <p class = "article-body">
+    <%=  @article.body  %>
   </p>
-<% end %>
+
+  <%# Timestamps %>
+  <div class = "timestamp">
+    <span class = "created-at">
+      Created <%= @article.created_at.strftime("%-d %b %y") %>
+          at <%= @article.created_at.strftime('%k:%M') %>
+    </span>
+
+    <% if @article.updated_at != @article.created_at %>
+      <span class = "updated-at">
+        Updated <%= @article.updated_at.strftime("%-d %b %y") %>
+            at <%= @article.updated_at.strftime('%k:%M') %>
+      </span>
+    <% end %>
+  </div>
+
+  <%# Display tags if they exist %>
+  <div class = 'tags-under-article'>
+    <%= render partial: 'shared/tags_display',
+                locals:  { tags_to_display: @article.tags,
+                          prefix: 'Tags:' } %>
+  </div>
+
+  <%# Buttons %>
+  <% if logged_in? %>
+    <div class = 'article-buttons-block'>
+      <%= link_to 'edit', edit_article_path(@article),
+                  class: 'button
+                          article-button
+                          edit-article-button' %>
+
+      <%= link_to 'delete', article_path(@article),
+                  method: :delete,
+                  class: 'button
+                          article-button
+                          delete-article-button' %>
+    </div>
+  <% end %>
+
+</div>
 
 <%# Add comment %>
-<%= render 'comments/form'%>
+<div class = 'comment-form'>
+  <span class = 'comment-form-title'>
+    Post a Comment
+  </span>
+
+  <%= render 'comments/form'%>
+</div>
 
 <%# Comments list %>
-<h3>Comments (<%= @article.comments.size %>)</h3>
-<%= render partial: 'comments/comment', collection: @article.comments, as: :comment %>
+<div class = 'comments-list'>
+  <span class = 'comment-counter'>
+    Comments (<%= @article.comments.size %>)
+  </span>
+
+  <%= render partial: 'comments/comment', collection: @article.comments, as: :comment %>
+</div>
