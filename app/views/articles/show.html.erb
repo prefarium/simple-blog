@@ -47,8 +47,19 @@
 </div>
 
 <%# Add comment %>
-<%= render 'comments/form'%>
+<div class = 'new-comment-form'>
+  <span class = 'new-comment-form-title'>
+    Post a Comment
+  </span>
+
+  <%= render 'comments/form'%>
+</div>
 
 <%# Comments list %>
-<h3>Comments (<%= @article.comments.size %>)</h3>
-<%= render partial: 'comments/comment', collection: @article.comments, as: :comment %>
+<div class = 'comments-list'>
+  <span class = 'comment-counter'>
+    Comments (<%= @article.comments.size %>)
+  </span>
+
+  <%= render partial: 'comments/comment', collection: @article.comments, as: :comment %>
+</div>

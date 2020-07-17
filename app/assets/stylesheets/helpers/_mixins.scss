@@ -11,10 +11,21 @@
   background-color: $nice-blue;
   color: white;
   text-decoration: none;
+  padding: 1px 3px;
 }
 
 @mixin button-defaults-hover {
   background-color: white;
   color: black;
   cursor: pointer;
+}
+
+@mixin comment-block-defaults {
+  display: block;
+  font-size: $font-size * 0.8;
+  background-color: $nice-yellow;
+  border-style: dotted;
+  border-width: 1px;
+  padding: $base-space;
+  margin-top: $base-space;
 }

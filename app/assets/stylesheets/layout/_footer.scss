@@ -1,6 +1,6 @@
 footer {
   font-size: $font-size * 0.7;
-  background-color: #eeeeee;;
+  background-color: $nice-gray;
 
   .session-marker {
     font-style: italic;
@@ -13,7 +13,6 @@ footer {
 
     float: right;
     border-radius: 8px;
-    padding: 1px 3px;
     margin: 1px 3px 1px 0;
   }
 

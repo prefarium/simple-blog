@@ -1,0 +1,45 @@
+@mixin set-form-width {
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.new-comment-form {
+  @include comment-block-defaults;
+}
+
+.new-comment-form-title {
+  font-weight: bold;
+}
+
+.new_comment { //defailt class fo this form set by reails
+  margin-top: $base-space;
+}
+
+.new-comment-field-block {
+  margin-bottom: $base-space;
+}
+
+.new-comment-field-title {
+  font-size: $font-size * 0.9;
+  font-style: italic;
+}
+
+.new-comment-name-field {
+  @include set-form-width()
+}
+
+.new-comment-text-field {
+  @include set-form-width()
+}
+
+.submit-comment {
+  @include button-defaults;
+  border-radius: 5px;
+}
+
+.submit-comment:hover {
+  @include button-defaults-hover;
+}
