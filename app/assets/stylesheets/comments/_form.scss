@@ -1,37 +1,33 @@
-.new-comment-form {
+.comment-form {
   @include comment-block-defaults;
 }
 
-.new-comment-form-title {
+.comment-form-title {
   font-weight: bold;
 }
 
-.new_comment { //defailt class fo this form set by reails
+.new_comment { //defailt class for this form set by reails
   margin-top: $base-space;
 }
 
-.new-comment-field-block {
+.comment-form-item {
   margin-bottom: $base-space;
 }
 
-.new-comment-field-title {
+.comment-form-item-title {
   font-size: $font-size * 0.9;
   font-style: italic;
 }
 
-.new-comment-name-field {
+.comment-form-item-field {
   @include set-form-width()
 }
 
-.new-comment-text-field {
-  @include set-form-width()
-}
-
-.submit-comment {
+.comment-form-submit-button {
   @include button-defaults;
   border-radius: 5px;
 }
 
-.submit-comment:hover {
+.comment-form-submit-button:hover {
   @include button-defaults-hover;
 }
