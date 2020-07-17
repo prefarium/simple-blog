@@ -1,0 +1,20 @@
+@mixin main-border-defaults {
+  border-color: black;
+  border-style: double;
+  border-width: 2px;
+}
+
+@mixin button-defaults {
+  border-color: $nice-blue;
+  border-width: 1px;
+  border-style: solid;
+  background-color: $nice-blue;
+  color: white;
+  text-decoration: none;
+}
+
+@mixin button-defaults-hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}

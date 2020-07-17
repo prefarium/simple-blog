@@ -1,0 +1,55 @@
+.article-box {
+  border-style: dotted;
+  border-width: 1px;
+  padding: $base-space;
+}
+
+.article-body {
+  display: block;
+  background-color: #fcfdbd;
+  border-style: solid;
+  border-width: 1px;
+  font-size: $font-size * 0.8;
+}
+
+.timestamp {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  font-size: $font-size * 0.7;
+  font-style: italic;
+  color: #686868;
+
+  margin: $base-space;
+}
+
+.tags-under-article {
+  text-align: center;
+}
+
+.article-buttons-block {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.article-button {
+  @include button-defaults;
+
+  font-size: $font-size * 0.7;
+  width: 40%;
+  border-radius: 8px;
+  padding: 1px 3px;
+  margin-top: $base-space;
+}
+
+.article-button:hover {
+  @include button-defaults-hover;
+}
+
+.delete-article-button {
+  border-color: #ff0000;
+  background-color: #ff0000;
+}

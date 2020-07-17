@@ -9,13 +9,13 @@
   <%# Timestamps %>
   <div class = "timestamp">
     <span class = "created-at">
-      Created <%= @article.created_at.strftime("%-d %b %Y") %>
+      Created <%= @article.created_at.strftime("%-d %b %y") %>
           at <%= @article.created_at.strftime('%k:%M') %>
     </span>
 
     <% if @article.updated_at != @article.created_at %>
       <span class = "updated-at">
-        Updated <%= @article.updated_at.strftime("%-d %b %Y") %>
+        Updated <%= @article.updated_at.strftime("%-d %b %y") %>
             at <%= @article.updated_at.strftime('%k:%M') %>
       </span>
     <% end %>

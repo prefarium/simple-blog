@@ -1,4 +1,8 @@
 @import 'helpers/variables';
 @import 'helpers/defaults';
+@import 'helpers/mixins';
+
+@import 'shared/tags_display';
+
 @import 'layout';
 @import 'articles';
