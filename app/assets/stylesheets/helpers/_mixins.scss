@@ -38,3 +38,19 @@
   box-sizing: border-box;
   border-style: inset;
 }
+
+@mixin link-list-item {
+  @include button-defaults;
+
+  background-color: black;
+  color: yellow;
+  border-color: yellow;
+}
+
+@mixin link-list-item-hover {
+  @include button-defaults-hover;
+
+  background-color: yellow;
+  color: black;
+  border-color: black;
+}

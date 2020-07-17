@@ -3,17 +3,9 @@
 }
 
 .link-to-article {
-  @include button-defaults;
-
-  background-color: black;
-  color: yellow;
-  border-color: yellow;
+  @include link-list-item;
 }
 
 .link-to-article:hover {
-  @include button-defaults-hover;
-
-  background-color: yellow;
-  color: black;
-  border-color: black;
+  @include link-list-item-hover;
 }
