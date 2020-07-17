@@ -3,8 +3,10 @@
 @import 'helpers/mixins';
 
 @import 'shared/tags_display';
+@import 'shared/flashes';
 
 @import 'layout';
 @import 'articles';
 @import 'comments';
-@import 'tags'
+@import 'tags';
+@import 'author-sessions';

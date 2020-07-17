@@ -19,7 +19,9 @@
     <li><%= link_to 'Tags', tags_path, class: :section %></li>
   <% end %>
 
-
+  <%# The chunk of code below is hidden from view
+        because it needs to be updated %>
+  <% if false %>
   <% if logged_in? %>
 
     <% if current_path == authors_path %>
@@ -29,6 +31,7 @@
       <li><%= link_to 'Authors', authors_path, class: :section %></li>
     <% end %>
 
+  <% end %>
   <% end %>
 
 </ul>
