@@ -52,6 +52,13 @@ body {
 
 
 .new-article-button {
+  border-color: #1c87c9;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #1c87c9;
+  color: white;
+  text-decoration: none;
+
   display: inline-block;
   border-radius: 11px;
   padding: 1px 3px;
@@ -60,12 +67,19 @@ body {
   font-size: $font-size * 0.85;
 }
 
+.new-article-button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
 
 .main-content {
   display: flex;
   flex-direction: column;
   flex-grow: 10;
   margin: $base-space;
+  width: 70%;
 
   .content-block {
     flex-grow: 1;
@@ -84,6 +98,7 @@ header {
 
 main {
   margin: $base-space * 2 0;
+  padding: $base-space;
 }
 
 
@@ -98,9 +113,21 @@ footer {
   }
 
   .auth-button {
+    border-color: #1c87c9;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #1c87c9;
+    color: white;
+    text-decoration: none;
     float: right;
     border-radius: 8px;
     padding: 1px 3px;
     margin: 1px 3px 1px 0;
+  }
+
+  .auth-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
   }
 }
