@@ -1,7 +1,7 @@
-$base-space: 1%;
-$border-width: 2px;
-$border-style: double;
-$font-size: 100%;
+@import 'layout/left_nav_block';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
 
 
 body {
@@ -19,61 +19,6 @@ body {
 }
 
 
-.sections-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    border-color: black;
-    border-style: $border-style;
-    border-width: $border-width;
-  }
-}
-
-
-.section {
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  color: white;
-  text-decoration: none;
-  font-size: $font-size * 0.85;
-  -webkit-text-stroke: 1px #1c87c9;
-  -webkit-text-fill-color: white;
-}
-
-
-.section:hover, #current-section {
-  background-color: #1c87c9;
-  -webkit-text-stroke: 1px white;
-}
-
-
-.new-article-button {
-  border-color: #1c87c9;
-  border-width: 1px;
-  border-style: solid;
-  background-color: #1c87c9;
-  color: white;
-  text-decoration: none;
-
-  display: inline-block;
-  border-radius: 11px;
-  padding: 1px 3px;
-  margin-top: $base-space * 2;
-  margin-bottom: $base-space;
-  font-size: $font-size * 0.85;
-}
-
-.new-article-button:hover {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}
-
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -83,51 +28,6 @@ body {
 
   .content-block {
     flex-grow: 1;
-    border-style: $border-style;
-    border-width: $border-width;
-  }
-}
-
-
-header {
-  background-color: #eeeeee;;
-  text-align: center;
-  font-weight: bold;
-}
-
-
-main {
-  margin: $base-space * 2 0;
-  padding: $base-space;
-}
-
-
-footer {
-  font-size: $font-size * 0.7;
-  background-color: #eeeeee;;
-
-  .session-marker {
-    font-style: italic;
-    display: inline-block;
-    margin: 2px 3px;
-  }
-
-  .auth-button {
-    border-color: #1c87c9;
-    border-width: 1px;
-    border-style: solid;
-    background-color: #1c87c9;
-    color: white;
-    text-decoration: none;
-    float: right;
-    border-radius: 8px;
-    padding: 1px 3px;
-    margin: 1px 3px 1px 0;
-  }
-
-  .auth-button:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
+    @include main-border-defaults;
   }
 }

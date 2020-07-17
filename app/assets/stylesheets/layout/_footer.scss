@@ -1,0 +1,23 @@
+footer {
+  font-size: $font-size * 0.7;
+  background-color: #eeeeee;;
+
+  .session-marker {
+    font-style: italic;
+    display: inline-block;
+    margin: 2px 3px;
+  }
+
+  .auth-button {
+    @include button-defaults;
+
+    float: right;
+    border-radius: 8px;
+    padding: 1px 3px;
+    margin: 1px 3px 1px 0;
+  }
+
+  .auth-button:hover {
+    @include button-defaults-hover;
+  }
+}
