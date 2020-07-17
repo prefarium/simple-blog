@@ -42,15 +42,16 @@
 @mixin link-list-item {
   @include button-defaults;
 
-  background-color: black;
-  color: yellow;
-  border-color: yellow;
+  background-color: $nice-yellow;
+  color: black;
+  border-color: black;
+  border-style: dashed;
 }
 
 @mixin link-list-item-hover {
   @include button-defaults-hover;
 
-  background-color: yellow;
+  background-color: rgb(252, 252, 79);
   color: black;
   border-color: black;
 }
