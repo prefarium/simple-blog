@@ -12,7 +12,7 @@
     <%# render 'shared/flashes' %>
 
     <%# Side navigation block %>
-    <aside class = "nav-block">
+    <aside class = "left-nav-block">
       <%= render 'layouts/section_switch' %>
       <%= render 'layouts/create_new_article' %>
     </aside>
@@ -21,19 +21,19 @@
     <div class = "main-content">
 
       <%# Page title %>
-      <header class = "content-blocks">
+      <header class = "content-block">
         <span class = "page-title">
           <%= yield(:page_title) %>
         </span>
       </header>
 
       <%# Yielded content %>
-      <main class = "content-blocks">
+      <main class = "content-block">
         <%= yield %>
       </main>
 
       <%# Login/logout buttons and informantion %>
-      <footer class = "content-blocks">
+      <footer class = "content-block">
         <%= render 'layouts/session_manager'%>
       </footer>
 
