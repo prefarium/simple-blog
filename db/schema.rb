@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2020_07_14_175703) do
   create_table "articles_tags", id: false, force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "tag_id", null: false
-    t.index "\"articles_id\"", name: "index_articles_tags_on_articles_id"
-    t.index "\"tags_id\"", name: "index_articles_tags_on_tags_id"
+    t.index ["article_id"], name: "index_articles_tags_on_article_id"
+    t.index ["tag_id"], name: "index_articles_tags_on_tag_id"
   end
 
   create_table "authors", force: :cascade do |t|

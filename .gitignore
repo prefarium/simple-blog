@@ -9,6 +9,7 @@
 
 # Temo files
 /temp.txt
+/TODO.md
 
 # Ignore bundler config.
 /.bundle

@@ -23,8 +23,8 @@ class CreateArticlesCommentsAndTags < ActiveRecord::Migration[6.0]
     end
 
     create_join_table :articles, :tags do |t|
-      t.index :articles_id
-      t.index :tags_id
+      t.index :article_id
+      t.index :tag_id
     end
 
   end
