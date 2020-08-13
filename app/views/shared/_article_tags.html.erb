@@ -1,0 +1,18 @@
+<%# Display tags of a specific article if they exist %>
+<% if tags_to_display.size.positive? %>
+
+  <%# Prefix is a sentence that stand before a tag list %>
+  <p class = 'tags-prefix'><%= prefix %></p>
+
+  <ul class = 'tags'>
+    <% tags_to_display.each do |tag| %>
+
+      <li class = 'tags__item'>
+        <%= link_to "#{tag.name}", tag_path(tag),
+                    class: 'button button--link-to-tag' %>
+      </li>
+
+    <% end %>
+  </ul>
+
+<% end %>

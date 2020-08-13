@@ -8,7 +8,7 @@
       <%= link_to article.title, article_path(article), class: 'link-to-article' %>
 
       <%# Display additional tags if they exist %>
-      <%= render partial: 'shared/tags_display',
+      <%= render partial: 'shared/article_tags',
                   locals:  { tags_to_display: article.tags - [@tag],
                             prefix: 'additional tags:' } %>
 

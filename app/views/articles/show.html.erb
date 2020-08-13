@@ -23,7 +23,7 @@
 
   <%# Display tags if they exist %>
   <div class = 'tags-under-article'>
-    <%= render partial: 'shared/tags_display',
+    <%= render partial: 'shared/article_tags',
                 locals:  { tags_to_display: @article.tags,
                           prefix: 'Tags:' } %>
   </div>

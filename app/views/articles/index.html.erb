@@ -1,15 +1,15 @@
 <% provide(:page_title, 'Articles') %>
 
 <%# List of all articles %>
-<ul class = "articles-list">
+<ul class = 'articles'>
   <% @articles.each do |article| %>
-    <li class = "article-item">
+    <li class = 'articles__item'>
 
       <%= link_to article.title, article_path(article),
-                  class: 'link-to-article' %>
+                  class: 'button button--link-to-article' %>
 
       <%# Display tags if they exist %>
-      <%= render partial: 'shared/tags_display',
+      <%= render partial: 'shared/article_tags',
                  locals:  { tags_to_display: article.tags,
                             prefix: 'tags:' } %>
     </li>

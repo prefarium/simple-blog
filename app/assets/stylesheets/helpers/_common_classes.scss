@@ -1,10 +1,14 @@
 .double-bordered {
-  border: double 0.1rem black;
+  border-style: double;
+  border-width: 0.1rem;
+  border-color: black;
 }
 
 .button {
   display: inline-block;
-  border: solid 0.1rem $nice-blue;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: $nice-blue;
   border-radius: 1rem;
   background-color: $nice-blue;
   color: white;

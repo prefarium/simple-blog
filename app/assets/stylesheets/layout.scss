@@ -1,14 +1,18 @@
-@import './helpers';
-
 body {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr auto 1fr;
-  grid-template-areas: 'nav header'
+  grid-template-areas:
+  'nav header'
   'nav main'
   'nav footer';
   margin: auto;
   max-width: 70ch;
+}
+
+.body__grid-item {
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 nav {
@@ -25,18 +29,14 @@ header {
   }
 }
 
-main {
+.main-content {
   grid-area: main;
+  padding: 0.25rem 0.5rem;
 }
 
 footer {
   grid-area: footer;
   background-color: $nice-gray;
-}
-
-.body__grid-item {
-  margin: 0.5rem;
-  padding: 0.5rem;
 }
 
 .sidebar {
