@@ -1,0 +1,19 @@
+.double-bordered {
+  border: double 0.1rem black;
+}
+
+.button {
+  display: inline-block;
+  border: solid 0.1rem $nice-blue;
+  border-radius: 1rem;
+  background-color: $nice-blue;
+  color: white;
+  text-decoration: none;
+  padding: 0.1rem 0.3rem;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}

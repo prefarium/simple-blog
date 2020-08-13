@@ -10,32 +10,24 @@
 
   <body>
     <%# Side navigation block %>
-    <aside class = "left-nav-block">
-      <%= render 'layouts/section_switch' %>
-      <%= render 'layouts/create_new_article' %>
-      <%= render 'shared/flashes' %>
-    </aside>
+    <nav class = 'body__grid-item sidebar'>
+      <%= render 'layouts/sidebar' %>
+      <%= render 'layouts/flash' %>
+    </nav>
 
-    <%# Main content%>
-    <div class = "main-content">
+    <%# Page title %>
+    <header class = 'body__grid-item double-bordered'>
+      <p><%= yield(:page_title) %></p>
+    </header>
 
-      <%# Page title %>
-      <header class = "content-block">
-        <span class = "page-title">
-          <%= yield(:page_title) %>
-        </span>
-      </header>
+    <%# Yielded content %>
+    <main class = 'body__grid-item double-bordered'>
+      <%= yield %>
+    </main>
 
-      <%# Yielded content %>
-      <main class = "content-block">
-        <%= yield %>
-      </main>
-
-      <%# Login/logout buttons and informantion %>
-      <footer class = "content-block">
-        <%= render 'layouts/session_manager'%>
-      </footer>
-
-    </div>
+    <%# Login/logout buttons and informantion %>
+    <footer class = 'body__grid-item double-bordered'>
+      <%= render 'layouts/session_manager'%>
+    </footer>
   </body>
 </html>

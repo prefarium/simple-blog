@@ -1,0 +1,37 @@
+$navfont: 0.85rem;
+
+.sidebar {
+  text-align: center;
+}
+
+.navblock__item {
+  text-align: center;
+  padding: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.navlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: $navfont;
+
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+
+  color: white;
+  text-decoration: none;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px $nice-blue;
+}
+
+.navlink:hover, #current-navlink {
+  text-decoration: underline;
+  background-color: $nice-blue;
+  -webkit-text-stroke: 1px white;
+}
+
+.button--new-article {
+  margin-top: 0.1rem;
+  font-size: $navfont;
+}
