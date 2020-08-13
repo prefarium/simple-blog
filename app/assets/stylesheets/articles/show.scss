@@ -1,0 +1,62 @@
+.article-container__article {
+  background-color: $nice-gray;
+  font-size: 0.8rem;
+  padding: 0.25rem;
+}
+
+.article-container__timestamps {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  margin: 0.5rem;
+
+  p {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #686868;
+  }
+}
+
+.article-container__tags {
+  text-align: center;
+}
+
+.article-container__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+
+  margin: 0.5rem;
+}
+
+.button--edit-article, .button--delete-article {
+  font-size: 0.7rem;
+  width: 40%;
+}
+
+.button--delete-article {
+  border-color: #ff0000;
+  background-color: #ff0000;
+}
+
+.comment-form {
+  border-top: solid 0.1rem black;
+  border-bottom: solid 0.1rem black;
+  padding: 0.25rem;
+}
+
+.comments {
+  padding: 0.25rem;
+}
+
+.comment-form__title, .comments__counter {
+  font-weight: bold;
+}
+
+.comment-form, .comments {
+  * {
+    font-size: 0.8rem;
+  }
+}
