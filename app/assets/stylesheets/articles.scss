@@ -1,16 +1,2 @@
-.articles__item {
-  margin: 0.25rem 0;
-}
-
-.button--link-to-article {
-  background-color: $nice-yellow;
-  color: black;
-  border-style: dashed;
-  border-color: black;
-  border-radius: 0;
-}
-
-.button--link-to-article:hover {
-  background-color: rgb(252, 252, 79);
-  border-style: solid;
-}
+@import 'articles/index';
+@import 'articles/show';
