@@ -1,9 +1,9 @@
 <%= form_for [@article, @comment] do |f| %>
 
-  <%= f.text_field :author_name, class: 'comment-form__input-field',
+  <%= f.text_field :author_name, class: 'input-field',
                                  placeholder: 'your name?' %>
 
-  <%= f.text_area :body, class: 'comment-form__input-field',
+  <%= f.text_area :body, class: 'input-field',
                          placeholder: 'write your comment right here' %>
 
   <%= f.submit 'Submit', class: 'button button--submit-comment' %>

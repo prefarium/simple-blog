@@ -21,3 +21,13 @@
   color: black;
   cursor: pointer;
 }
+
+.input-field {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0.25rem 0;
+  border-style: inset;
+  border-width: 0.1rem;
+  font-family: 'Cantarell';
+}

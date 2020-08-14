@@ -1,6 +1,7 @@
 <% if logged_in? %>
-  <p class = 'active-session-marker'>
-    <%= "Logged in as #{current_user.username}" %>
+  <p class = 'login-info'>
+    Logged in as <span class = 'login-info__username'>
+    <%= current_user.username %></span>
   </p>
   <%= link_to 'logout', logout_path, class: 'button button--auth' %>
 

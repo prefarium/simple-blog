@@ -1,24 +1,14 @@
 <%= form_for(@article) do |f| %>
-  <ul>
-    <% @article.errors.full_messages.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
 
-  <p class = 'article-form-item'>
-    <%= f.label :title, class: 'article-form-item-title' %><br />
-    <%= f.text_field :title, class: 'article-form-item-field' %>
-  </p>
+  <%= f.text_field :title, class: 'input-field',
+                           placeholder: 'title goes here' %>
 
-  <p class = 'article-form-item'>
-    <%= f.label :body, class: 'article-form-item-title' %><br />
-    <%= f.text_area :body, class: 'article-form-item-field' %>
-  </p>
+  <%= f.text_area :body, class: 'input-field',
+                         placeholder: 'article body' %>
 
-  <p class = 'article-form-item'>
-    <%= f.label :tag_list, class: 'article-form-item-title' %><br />
-    <%= f.text_field :tag_list, class: 'article-form-item-field' %>
-  </p>
+  <%= f.text_field :tag_list, class: 'input-field',
+                              placeholder: 'tags separated by space' %>
 
-  <%= f.submit 'Load!', class: 'article-form-submit-button' %>
+  <%= f.submit 'Submit', class: 'button button--submit-article' %>
+
 <% end %>

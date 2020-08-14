@@ -1,8 +1,12 @@
 footer {
   position: relative;
+
+  * {
+    font-size: 0.8rem;
+  }
 }
 
-.active-session-marker {
+.login-info {
   display: inline-block;
   font-style: italic;
 
@@ -11,10 +15,10 @@ footer {
   transform: translateY(-50%);
 }
 
-.button--auth {
-  float: right;
+.login-info__username {
+  font-weight: bold;
 }
 
-.active-session-marker, .button--auth {
-  font-size: 0.85rem;
+.button--auth {
+  float: right;
 }
