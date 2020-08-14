@@ -6,7 +6,7 @@
     <li class = 'articles__item'>
 
       <%= link_to article.title, article_path(article),
-                  class: 'button button--link-to-article' %>
+                  class: 'button button--article-link' %>
 
       <%# Display tags if they exist %>
       <%= render partial: 'shared/article_tags',

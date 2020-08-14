@@ -1,24 +1,25 @@
 <% provide(:page_title, 'All tags') %>
 
 <%# Displays all tags %>
-<ul>
+<ul class = 'all-tags'>
   <% @tags.each do |tag| %>
-    <li>
+    <li class = 'all-tags__item'>
 
-      <%# Botton to delete tag %>
+      <%# Button to delete tag %>
       <% if logged_in? %>
         <%= link_to 'delete', tag_path(tag),
                     method: :delete,
-                    class: 'delete-tag-button' %>
+                    class: 'button button--delete-tag' %>
       <% end %>
 
       <%# Tag itself %>
-      <%= link_to tag.name, tag_path(tag), class: 'link-to-tag' %>
+      <%= link_to tag.name, tag_path(tag),
+          class: 'button button--link-to-tag' %>
 
       <%# Displays amount of articles per tag %>
-      <span class = 'tags-prefix'>
+      <p class = 'tags-prefix'>
         (<%= pluralize(tag.articles.size, 'article') %>)
-      </span>
+      </p>
 
     </li>
   <% end %>

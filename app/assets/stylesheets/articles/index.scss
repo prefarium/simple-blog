@@ -2,7 +2,7 @@
   margin: 0.25rem 0.25rem;
 }
 
-.button--link-to-article {
+.button--article-link {
   background-color: $nice-yellow;
   color: black;
   border-style: dashed;
@@ -10,7 +10,7 @@
   border-radius: 0;
 }
 
-.button--link-to-article:hover {
+.button--article-link:hover {
   background-color: rgb(252, 252, 79);
   border-style: solid;
 }
