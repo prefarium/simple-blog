@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   get 'login',  to: 'author_sessions#new'
   get 'logout', to: 'author_sessions#destroy'
+  get 'signup', to: 'authors#new'
 
 end

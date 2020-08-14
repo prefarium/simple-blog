@@ -1,14 +1,16 @@
-<% if logged_in? %>
-  <p class = 'login-info'>
-    Logged in as <span class = 'login-info__username'>
-    <%= current_user.username %></span>
-  </p>
-  <%= link_to 'logout', logout_path, class: 'button button--auth' %>
+<% if Author.exists? %>
+
+  <% if logged_in? %>
+    <p class = 'login-info'>
+      Logged in as <span class = 'login-info__username'>
+      <%= current_user.username %></span>
+    </p>
+    <%= link_to 'logout', logout_path, class: 'button button--auth' %>
+
+  <% else %>
+    <%= link_to 'login', login_path, class: 'button button--auth' %>
+  <% end %>
 
 <% else %>
-  <%= link_to 'login', login_path, class: 'button button--auth' %>
-<% end %>
-
-<% unless Author.exists? %>
-  <%= link_to 'registration', new_author_path, class: 'button button--auth' %>
+  <%= link_to 'sign up', signup_path, class: 'button button--auth' %>
 <% end %>

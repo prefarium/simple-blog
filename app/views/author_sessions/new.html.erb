@@ -1,15 +1,12 @@
 <% provide(:page_title, 'Login') %>
 
 <%= form_tag author_sessions_path, method: :post do %>
-  <p>
-    <%= label_tag :email, 'Email', class: 'login-form-item-title' %>
-    <%= text_field_tag :email, '', class: 'login-form-item-field' %><br/>
-  </p>
 
-  <p>
-    <%= label_tag :password, 'Password', class: 'login-form-item-title' %>
-    <%= password_field_tag :password, '', class: 'login-form-item-field' %><br/>
-  </p>
+  <%= text_field_tag :email, '', class: 'input-field',
+                                 placeholder: 'Email' %>
 
-  <%= submit_tag "Login", class: 'login-button' %>
+  <%= password_field_tag :password, '', class: 'input-field',
+                                        placeholder: 'Password' %>
+
+  <%= submit_tag "login", class: 'button button--login' %>
 <% end %>
