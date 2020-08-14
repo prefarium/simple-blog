@@ -1,31 +1,19 @@
-.comments-list {
-  @include comment-block-defaults;
-  background-color: white;
-}
-
-.comment-counter {
-  font-weight: bold;
-}
-
 .comment {
-  @include comment-block-defaults;
-  border-style: dashed;
-}
-
-.comment-info {
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
   background-color: $nice-gray;
-  padding: $base-space;
-  margin-bottom: $base-space;
+  clear: both;
+  float: left;
 }
 
 .commentator-name {
   font-weight: bold;
-  margin-right: $base-space;
 }
 
-.comment-timestamp {
+.comment__title {
   font-style: italic;
+  background-color: #9c9c9c;
+  color: white;
+  padding: 0.25rem;
+  margin-bottom: 0.25rem;
 }

@@ -1,0 +1,10 @@
+@import 'helpers/variables';
+
+.flash {
+  border: dashed 2px $nice-blue;
+  background-color: $nice-gray;
+  color: black;
+  font-size: 0.6rem;
+  margin-top: 0.3rem;
+  padding: 0.1rem;
+}

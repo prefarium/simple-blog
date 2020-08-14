@@ -1,0 +1,21 @@
+footer {
+  position: relative;
+}
+
+.login-info {
+  display: inline-block;
+  font-style: italic;
+  font-size: 0.8rem;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.login-info__username {
+  font-weight: bold;
+}
+
+.button--auth {
+  float: right;
+}

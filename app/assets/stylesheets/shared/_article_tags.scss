@@ -1,0 +1,29 @@
+.tags-prefix {
+  display: inline-block;
+  color: #686868;
+}
+
+.tags {
+  display: inline-block;
+}
+
+.tags__item {
+  display: inline-block;
+}
+
+.tags-prefix, .button--link-to-tag {
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+.button--link-to-tag {
+  border-color: #9c9c9c;
+  border-radius: 0;
+  background-color: $nice-gray;
+  color: #2c2b2b;
+}
+
+.button--link-to-tag:hover {
+  background-color: #9c9c9c;
+  color: white;
+}

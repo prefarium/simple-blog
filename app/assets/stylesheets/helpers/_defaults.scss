@@ -1,13 +1,14 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: $font-size;
+  font-size: 30px;
+  font-family: 'DejaVu Serif';
 }
 
 ul {
   list-style-type: none;
 }
 
-main {
-  font-size: $font-size * 0.8;
+html {
+  padding: 0.5rem;
 }

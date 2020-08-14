@@ -1,0 +1,38 @@
+<%# This ul contains links to all available site sections %>
+<ul class = 'navblock'>
+
+  <% current_path = request.env['PATH_INFO'] %>
+
+  <%# If a link directs to the current page then add id to it%>
+  <%#   A link with id shall be highlighted differently %>
+  <% if current_path == articles_path %>
+    <li class = 'navblock__item double-bordered'>
+      <%= link_to 'Articles', articles_path, class: :navlink,
+                                             id: 'current-navlink' %>
+    </li>
+
+  <% else %>
+    <li class = 'navblock__item double-bordered'>
+      <%= link_to 'Articles', articles_path, class: :navlink %>
+    </li>
+  <% end %>
+
+  <% if current_path == tags_path %>
+    <li class = 'navblock__item double-bordered'>
+      <%= link_to 'Tags', tags_path, class: :navlink,
+                                     id: 'current-navlink' %>
+    </li>
+
+  <% else %>
+    <li class = 'navblock__item double-bordered'>
+      <%= link_to 'Tags', tags_path, class: :navlink %>
+    </li>
+  <% end %>
+
+</ul>
+
+<%# Button for creating a new article %>
+<% if logged_in? %>
+  <%= link_to 'new article', new_article_path,
+              class: 'button button--new-article' %>
+<% end %>

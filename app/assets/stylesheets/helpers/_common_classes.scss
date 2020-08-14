@@ -1,0 +1,34 @@
+.double-bordered {
+  border-style: double;
+  border-width: 0.1rem;
+  border-color: black;
+}
+
+.button {
+  display: inline-block;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: $nice-blue;
+  border-radius: 1rem;
+  background-color: $nice-blue;
+  color: white;
+  text-decoration: none;
+  padding: 0.1rem 0.3rem;
+  font-size: 0.8rem;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.input-field {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0.25rem 0;
+  border-style: inset;
+  border-width: 0.1rem;
+  font-family: 'Cantarell';
+}

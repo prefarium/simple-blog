@@ -1,8 +1,10 @@
-@import 'shared/tags_display';
-@import 'shared/flashes';
+@import 'helpers';
 
 @import 'layout';
 @import 'articles';
 @import 'comments';
 @import 'tags';
-@import 'author-sessions';
+@import 'author_sessions';
+@import 'authors';
+
+@import 'shared/article_tags';
